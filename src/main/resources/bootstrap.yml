@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: service-sys-genid
+  mvc:
+    favicon:
+      enabled: true
+  profiles:
+    active: dev
+
+
+
