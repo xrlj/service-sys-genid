@@ -9,7 +9,7 @@ spring:
           enabled: true
           service-id: config-server
         username: admin
-        password: 123456
+        password: '{cipher}AQCD4A9iw9wVEB+dq1xAnzwtlP5TtB9q49xCMZPnh4+uqAZcj5GaxARmjJN+0UdjkpZvBooqP7F9MsdiERWCjmBZ2zt7U79NluiTkUbb9CLPoH0Xc6d/dvvUAX3DAqTmYVVU9FLGyrSXocs1D0jtUA0F7oV+hFVjxLmPWFrxh8os8c5k1yJkUZVG+PmmrSUeRtWrwyqooBu9YRkZ/oRDaMADj6ecfP4A4HN6NvrUncXCpGB92cLrf51NPboeRFYvUi6bnptQtz7rknL/sq88YDBHCyJl422RBJotN50bQfJSmqVYSmwca3Agn3Whtz4WnbxSW6fhTBZuFmxptmu63bpniv7pgix9F2Lus8ueSTE8jNfMi0cc0twOGDpOHN6exZ4='
 ##服务注册
 eureka:
   instance:
