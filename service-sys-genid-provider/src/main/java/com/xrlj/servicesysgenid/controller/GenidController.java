@@ -25,11 +25,12 @@ public class GenidController extends BaseController implements GenidApi {
 
     @Override
     public long genId() {
-        return 0;
+        return genidService.genId();
     }
 
     @Override
     public VIdResp expId(long id) {
-        return null;
+        VIdResp vIdResp = genidService.expId(id);
+        return vIdResp;
     }
 }

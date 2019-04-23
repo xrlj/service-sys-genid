@@ -1,6 +1,7 @@
 package com.xrlj.servicesysgenid.service.impl;
 
 import com.xrlj.servicesysgenid.api.vo.resp.VIdResp;
+import com.xrlj.servicesysgenid.common.ID;
 import com.xrlj.servicesysgenid.common.SnowflakeIdWorker;
 import com.xrlj.servicesysgenid.service.GenidService;
 import lombok.extern.slf4j.Slf4j;
@@ -12,24 +13,33 @@ import org.springframework.stereotype.Service;
 public class GenidServiceImpl implements GenidService {
 
     @Value("${snowflake.data-center-id}")
-    private static long dataCenterId;
+    private  String dataCenterId;
     @Value("${snowflake.worker-id}")
-    private static long workerId;
+    private String workerId;
 
-    private static SnowflakeIdWorker snowflakeIdWorker = null;
-    static {
-        if (snowflakeIdWorker == null) {
-            snowflakeIdWorker = new SnowflakeIdWorker(dataCenterId,workerId);
-        }
-    }
+//    private static SnowflakeIdWorker snowflakeIdWorker = null;
+//    {
+//        if (snowflakeIdWorker == null) {
+//            snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
+//        }
+//    }
 
     @Override
     public long genId() {
-        return 0;
+        SnowflakeIdWorker snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
+        long id = snowflakeIdWorker.nextId();
+        return id;
     }
 
     @Override
     public VIdResp expId(long id) {
-        return null;
+        SnowflakeIdWorker snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
+        ID ID = snowflakeIdWorker.convert(id);
+        VIdResp vIdResp = new VIdResp();
+        vIdResp.setDataCenterId(ID.getDataCenterId());
+        vIdResp.setWorkerId(ID.getWorkerId());
+        vIdResp.setSequence(ID.getSequence());
+        vIdResp.setTimeStamp(ID.getTimeStamp());
+        return vIdResp;
     }
 }

@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping
+@RequestMapping("/genid")
 public interface GenidApi {
 
     /**
      * 生成分布式id
      * @return
      */
-    @PostMapping
+    @GetMapping
     long genId();
 
     /**

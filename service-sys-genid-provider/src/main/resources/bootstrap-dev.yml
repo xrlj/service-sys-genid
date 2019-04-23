@@ -9,13 +9,13 @@ spring:
           enabled: true
           service-id: config-server
         username: admin
-        password: '{cipher}AQCD4A9iw9wVEB+dq1xAnzwtlP5TtB9q49xCMZPnh4+uqAZcj5GaxARmjJN+0UdjkpZvBooqP7F9MsdiERWCjmBZ2zt7U79NluiTkUbb9CLPoH0Xc6d/dvvUAX3DAqTmYVVU9FLGyrSXocs1D0jtUA0F7oV+hFVjxLmPWFrxh8os8c5k1yJkUZVG+PmmrSUeRtWrwyqooBu9YRkZ/oRDaMADj6ecfP4A4HN6NvrUncXCpGB92cLrf51NPboeRFYvUi6bnptQtz7rknL/sq88YDBHCyJl422RBJotN50bQfJSmqVYSmwca3Agn3Whtz4WnbxSW6fhTBZuFmxptmu63bpniv7pgix9F2Lus8ueSTE8jNfMi0cc0twOGDpOHN6exZ4='
+        password: 123456
 ##服务注册
 eureka:
   instance:
     prefer-ip-address: true #实例在注册中心以ip形式显示
-#    instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
-    hostname: localhost #实例在注册中心以域名显示
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+#    hostname: localhost #实例在注册中心以域名显示
   client:
     service-url:
       defaultZone: http://172.31.31.31:1111/eureka/
