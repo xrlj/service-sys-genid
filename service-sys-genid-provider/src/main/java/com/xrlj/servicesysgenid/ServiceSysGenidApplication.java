@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
@@ -18,6 +19,7 @@ import org.springframework.context.annotation.FilterType;
 @ComponentScan(basePackages = {"com.xrlj.servicesysgenid", "com.xrlj.framework.spring"},excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {SchedulingConfig.class, DataSourceConfig.class, JdbcTemplateConfig.class}))
 @EnableDiscoveryClient
 @EnableEurekaClient //可注册到服务中心
+@RefreshScope
 public class ServiceSysGenidApplication extends BaseSpringbootApplication {
 
     public static void main(String[] args) {
