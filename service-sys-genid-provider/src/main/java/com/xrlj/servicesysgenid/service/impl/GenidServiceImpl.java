@@ -13,27 +13,25 @@ import org.springframework.stereotype.Service;
 public class GenidServiceImpl implements GenidService {
 
     @Value("${snowflake.data-center-id}")
-    private  String dataCenterId;
+    private static long dataCenterId;
     @Value("${snowflake.worker-id}")
-    private String workerId;
+    private static long workerId;
 
-//    private static SnowflakeIdWorker snowflakeIdWorker = null;
-//    {
-//        if (snowflakeIdWorker == null) {
-//            snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
-//        }
-//    }
+    private static SnowflakeIdWorker snowflakeIdWorker = null;
+    static {
+        if (snowflakeIdWorker == null) {
+            snowflakeIdWorker = new SnowflakeIdWorker(dataCenterId, workerId);
+        }
+    }
 
     @Override
     public long genId() {
-        SnowflakeIdWorker snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
         long id = snowflakeIdWorker.nextId();
         return id;
     }
 
     @Override
     public VIdResp expId(long id) {
-        SnowflakeIdWorker snowflakeIdWorker = new SnowflakeIdWorker(Long.valueOf(dataCenterId),Long.valueOf(workerId));
         ID ID = snowflakeIdWorker.convert(id);
         VIdResp vIdResp = new VIdResp();
         vIdResp.setDataCenterId(ID.getDataCenterId());
