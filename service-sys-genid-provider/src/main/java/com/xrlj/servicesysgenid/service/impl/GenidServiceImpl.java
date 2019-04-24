@@ -1,16 +1,18 @@
 package com.xrlj.servicesysgenid.service.impl;
 
+import com.xrlj.framework.spring.Base;
 import com.xrlj.servicesysgenid.api.vo.resp.VIdResp;
 import com.xrlj.servicesysgenid.common.ID;
 import com.xrlj.servicesysgenid.common.SnowflakeIdWorker;
 import com.xrlj.servicesysgenid.service.GenidService;
+import com.xrlj.utils.PrintUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class GenidServiceImpl implements GenidService {
+public class GenidServiceImpl extends Base implements GenidService {
 
     @Value("${snowflake.data-center-id}")
     private static long dataCenterId;
@@ -33,11 +35,8 @@ public class GenidServiceImpl implements GenidService {
     @Override
     public VIdResp expId(long id) {
         ID ID = snowflakeIdWorker.convert(id);
-        VIdResp vIdResp = new VIdResp();
-        vIdResp.setDataCenterId(ID.getDataCenterId());
-        vIdResp.setWorkerId(ID.getWorkerId());
-        vIdResp.setSequence(ID.getSequence());
-        vIdResp.setTimeStamp(ID.getTimeStamp());
+        VIdResp vIdResp = modelMapper.map(ID,VIdResp.class);
+        PrintUtil.println(vIdResp.toString());
         return vIdResp;
     }
 }
