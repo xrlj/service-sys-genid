@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-//@RefreshScope
 public class GenidController extends BaseController implements GenidApi {
 
     @Autowired
