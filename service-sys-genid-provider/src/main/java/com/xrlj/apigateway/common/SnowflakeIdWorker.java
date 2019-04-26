@@ -1,4 +1,4 @@
-package com.xrlj.servicesysgenid.common;
+package com.xrlj.apigateway.common;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

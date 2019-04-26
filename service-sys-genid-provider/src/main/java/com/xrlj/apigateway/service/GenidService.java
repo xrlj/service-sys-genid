@@ -1,6 +1,6 @@
-package com.xrlj.servicesysgenid.service;
+package com.xrlj.apigateway.service;
 
-import com.xrlj.servicesysgenid.api.vo.resp.VIdResp;
+import com.xrlj.apigateway.api.vo.resp.VIdResp;
 
 public interface GenidService {
 
