@@ -6,11 +6,8 @@
         <groupId>com.xrlj</groupId>
         <artifactId>service-sys-genid</artifactId>
         <version>0.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.xrlj</groupId>
     <artifactId>service-sys-genid-provider</artifactId>
-    <version>0.0.1</version>
     <packaging>jar</packaging>
     <name>service-sys-genid-provider</name>
     <description>分布式id服务</description>
