@@ -1,4 +1,4 @@
-package com.xrlj.apigateway.api.vo.resp;
+package com.xrlj.servicesysgenid.api.vo.resp;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

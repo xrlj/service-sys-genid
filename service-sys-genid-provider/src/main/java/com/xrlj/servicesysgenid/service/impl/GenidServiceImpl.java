@@ -1,10 +1,10 @@
-package com.xrlj.apigateway.service.impl;
+package com.xrlj.servicesysgenid.service.impl;
 
 import com.xrlj.framework.spring.Base;
-import com.xrlj.apigateway.api.vo.resp.VIdResp;
-import com.xrlj.apigateway.common.ID;
-import com.xrlj.apigateway.common.SnowflakeIdWorker;
-import com.xrlj.apigateway.service.GenidService;
+import com.xrlj.servicesysgenid.api.vo.resp.VIdResp;
+import com.xrlj.servicesysgenid.common.ID;
+import com.xrlj.servicesysgenid.common.SnowflakeIdWorker;
+import com.xrlj.servicesysgenid.service.GenidService;
 import com.xrlj.utils.PrintUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,6 +1,6 @@
-package com.xrlj.apigateway.api;
+package com.xrlj.servicesysgenid.api;
 
-import com.xrlj.apigateway.api.vo.resp.VIdResp;
+import com.xrlj.servicesysgenid.api.vo.resp.VIdResp;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

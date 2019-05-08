@@ -1,4 +1,4 @@
-package com.xrlj.apigateway;
+package com.xrlj.servicesysgenid;
 
 import com.xrlj.framework.base.BaseSpringbootApplication;
 import com.xrlj.framework.spring.config.SchedulingConfig;
@@ -18,7 +18,7 @@ import org.springframework.context.annotation.FilterType;
 
 @Slf4j
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.xrlj.apigateway", "com.xrlj.framework.spring"},excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {SchedulingConfig.class, DataSourceConfig.class, JdbcTemplateConfig.class}))
+@ComponentScan(basePackages = {"com.xrlj.servicesysgenid", "com.xrlj.framework.spring"},excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {SchedulingConfig.class, DataSourceConfig.class, JdbcTemplateConfig.class}))
 @EnableDiscoveryClient
 @EnableEurekaClient //可注册到服务中心
 @EnableFeignClients

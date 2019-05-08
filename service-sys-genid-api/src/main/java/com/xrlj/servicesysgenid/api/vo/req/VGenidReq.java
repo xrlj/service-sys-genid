@@ -1,4 +1,4 @@
-package com.xrlj.apigateway.api.vo.req;
+package com.xrlj.servicesysgenid.api.vo.req;
 
 import com.xrlj.framework.base.VBase;
 import lombok.Data;

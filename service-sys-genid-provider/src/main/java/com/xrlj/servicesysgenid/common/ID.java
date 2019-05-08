@@ -1,4 +1,4 @@
-package com.xrlj.apigateway.common;
+package com.xrlj.servicesysgenid.common;
 
 import java.io.Serializable;
 
