@@ -4,6 +4,7 @@ import com.xrlj.framework.base.BaseSpringbootApplication;
 import com.xrlj.framework.spring.config.SchedulingConfig;
 import com.xrlj.framework.spring.config.ds.myself.DataSourceConfig;
 import com.xrlj.framework.spring.config.ds.myself.JdbcTemplateConfig;
+import com.xrlj.framework.spring.config.ds.myself.JooqConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.FilterType;
 
 @Slf4j
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.xrlj.servicesysgenid", "com.xrlj.framework.spring"},excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {SchedulingConfig.class, DataSourceConfig.class, JdbcTemplateConfig.class}))
+@ComponentScan(basePackages = {"com.xrlj.servicesysgenid", "com.xrlj.framework.spring"},excludeFilters = @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {SchedulingConfig.class, DataSourceConfig.class, JdbcTemplateConfig.class, JooqConfig.class}))
 @EnableDiscoveryClient
 @EnableEurekaClient //可注册到服务中心
 @EnableFeignClients
