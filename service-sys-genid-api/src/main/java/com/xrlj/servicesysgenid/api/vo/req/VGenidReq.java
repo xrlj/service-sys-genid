@@ -1,6 +1,6 @@
 package com.xrlj.servicesysgenid.api.vo.req;
 
-import com.xrlj.framework.base.VBase;
+import com.xrlj.framework.vo.VBase;
 import lombok.Data;
 
 import javax.validation.constraints.Max;
