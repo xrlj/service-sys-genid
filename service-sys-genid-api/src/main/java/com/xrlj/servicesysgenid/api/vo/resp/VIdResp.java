@@ -1,5 +1,6 @@
 package com.xrlj.servicesysgenid.api.vo.resp;
 
+import com.xrlj.framework.vo.VBaseResp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -11,7 +12,9 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class VIdResp implements Serializable,Cloneable {
+public class VIdResp extends VBaseResp {
+
+    private static final long serialVersionUID = 6215905249978419069L;
 
     /**
      * 时间戳。41位的时间序列
