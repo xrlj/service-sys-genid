@@ -1,5 +1,6 @@
 package com.xrlj.servicesysgenid;
 
+import com.xrlj.framework.base.BaseSpringbootApplication;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @EnableCircuitBreaker
 @RefreshScope
-public class ServiceSysGenidApplication {
+public class ServiceSysGenidApplication extends BaseSpringbootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceSysGenidApplication.class, args);
