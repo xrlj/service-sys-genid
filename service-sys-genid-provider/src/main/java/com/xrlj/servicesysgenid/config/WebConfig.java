@@ -1,7 +1,7 @@
 package com.xrlj.servicesysgenid.config;
 
-import com.xrlj.framework.spring.config.web.AbstractWebConfiguration;
-import com.xrlj.framework.spring.config.web.JsonHandlerExceptionResolver;
+import com.xrlj.framework.config.AbstractWebConfiguration;
+import com.xrlj.framework.config.JsonHandlerExceptionResolver;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.Validator;
 import org.springframework.web.servlet.HandlerExceptionResolver;

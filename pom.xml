@@ -39,6 +39,11 @@
 				<artifactId>service-sys-genid-api</artifactId>
 				<version>${service-sys-genid-api.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.xrlj</groupId>
+				<artifactId>xrlj-configuration-web</artifactId>
+				<version>0.0.1</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
