@@ -24,9 +24,4 @@ public interface GenidApi {
     @GetMapping("/{id}")
     VIdResp expId(@PathVariable(name = "id") long id);
 
-    @GetMapping("/setSession")
-    String setSession();
-
-    @GetMapping("/sessions")
-    String sessions();
 }

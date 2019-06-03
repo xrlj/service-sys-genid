@@ -33,16 +33,4 @@ public class GenidController extends BaseController implements GenidApi {
         VIdResp vIdResp = genidService.expId(id);
         return vIdResp;
     }
-
-    @Override
-    public String setSession() {
-        HttpSession s = getSession();
-        s.setAttribute("username","账目天");
-        return s.getId();
-    }
-
-    @Override
-    public String sessions() {
-        return getSession().getAttribute("username") + "==" + getSession().getId();
-    }
 }
