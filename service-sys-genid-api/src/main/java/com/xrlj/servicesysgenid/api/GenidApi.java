@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/genid")
+@RequestMapping("${genid.index}")
 public interface GenidApi {
 
     /**
@@ -21,7 +21,7 @@ public interface GenidApi {
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
+    @GetMapping("${genid.expId}")
     VIdResp expId(@PathVariable(name = "id") long id);
 
 }
