@@ -15,7 +15,8 @@ eureka:
   instance:
     prefer-ip-address: true #实例在注册中心以ip形式显示
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
-#    hostname: localhost #实例在注册中心以域名显示
+    ip-address: 120.79.2.30
+  #    hostname: localhost #实例在注册中心以域名显示
   client:
     service-url:
       defaultZone: http://120.79.2.30:1111/eureka/,http://120.79.41.58:1111/eureka/
