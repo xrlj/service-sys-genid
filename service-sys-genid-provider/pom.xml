@@ -13,7 +13,6 @@
     <description>分布式id服务</description>
 
     <properties>
-        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
@@ -25,6 +24,16 @@
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.xrlj</groupId>
+            <artifactId>xrlj-configuration-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xrlj</groupId>
+            <artifactId>service-sys-genid-api</artifactId>
+        </dependency>
+
         <!-- //////// spring-cloud start ////////-->
         <!--eureka注册发现-->
         <dependency>
@@ -57,15 +66,6 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
         <!-- //////// spring-cloud end ////////-->
-
-        <dependency>
-            <groupId>com.xrlj</groupId>
-            <artifactId>service-sys-genid-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.xrlj</groupId>
-            <artifactId>xrlj-configuration-web</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
