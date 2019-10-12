@@ -36,7 +36,7 @@ public class GenidServiceImpl extends Base implements GenidService {
     public VIdResp expId(long id) {
         ID ID = snowflakeIdWorker.convert(id);
         VIdResp vIdResp = getModelMapper().map(ID,VIdResp.class);
-        PrintUtil.println(vIdResp.toString());
+        log.debug(vIdResp.toString());
         return vIdResp;
     }
 }
