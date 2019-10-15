@@ -1,7 +1,8 @@
 spring:
   devtools:
     livereload:
-      enabled: true  #禁用livereload服务器
+      enabled: false  #禁用livereload服务器
+      port: 35729 #注意多个端口冲突
     remote:
       restart:
         enabled: false
