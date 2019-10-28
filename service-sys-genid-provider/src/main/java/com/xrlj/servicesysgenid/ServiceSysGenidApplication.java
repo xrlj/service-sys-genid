@@ -23,6 +23,6 @@ public class ServiceSysGenidApplication extends BaseSpringbootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceSysGenidApplication.class, args);
-        log.info(">>>>>服务启动成功：{}",args);
+        log.info(">>>>>服务{}启动成功：{}",ServiceSysGenidApplication.class.getSimpleName(), args);
     }
 }
