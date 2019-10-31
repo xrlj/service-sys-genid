@@ -1,5 +1,6 @@
 package com.xrlj.servicesysgenid.config;
 
+import com.xrlj.framework.config.AbstractInnerWebConfiguration;
 import com.xrlj.framework.config.AbstractWebConfiguration;
 import com.xrlj.framework.config.JsonHandlerExceptionResolver;
 import org.springframework.context.annotation.Configuration;
@@ -14,17 +15,7 @@ import java.util.List;
  * 这种方式会屏蔽springboot的@EnableAutoConfiguration中的设置
  */
 @Configuration
-public class WebConfig extends AbstractWebConfiguration {
-
-    /**
-     * 全局验证器
-     *
-     * @return
-     */
-    @Override
-    protected Validator getValidator() {
-        return super.getValidator();
-    }
+public class WebConfig extends AbstractInnerWebConfiguration {
 
     /**
      * 定义拦截器。
@@ -34,15 +25,6 @@ public class WebConfig extends AbstractWebConfiguration {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         super.addInterceptors(registry);
-    }
-
-    /**
-     * 统一异常处理。
-     * @param exceptionResolvers
-     */
-    @Override
-    protected void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
-        exceptionResolvers.add(new JsonHandlerExceptionResolver());
     }
 
 
