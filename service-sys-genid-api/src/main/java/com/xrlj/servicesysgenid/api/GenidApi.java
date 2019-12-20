@@ -15,6 +15,9 @@ public interface GenidApi {
     @GetMapping
     long genId();
 
+    @GetMapping("${genid.batch}")
+    long[] genIds(@PathVariable int size);
+
     /**
      *
      * 解析分布式id

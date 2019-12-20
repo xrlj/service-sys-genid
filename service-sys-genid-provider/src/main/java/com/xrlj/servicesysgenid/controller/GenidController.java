@@ -9,14 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpSession;
-
 @Slf4j
 @RestController
 public class GenidController extends BaseController implements GenidApi {
 
+    private final GenidService genidService;
+
     @Autowired
-    private GenidService genidService;
+    public GenidController(GenidService genidService) {
+        this.genidService = genidService;
+    }
 
     @Override
     protected void initBinder(WebDataBinder binder) {
@@ -27,6 +29,16 @@ public class GenidController extends BaseController implements GenidApi {
     public long genId() {
         return genidService.genId();
     }
+
+    @Override
+    public long[] genIds(int size) {
+        long[] ids = new long[size];
+        for (int i = 0; i < size; i++) {
+            ids[i] = genidService.genId();
+        }
+        return ids;
+    }
+
 
     @Override
     public VIdResp expId(long id) {
