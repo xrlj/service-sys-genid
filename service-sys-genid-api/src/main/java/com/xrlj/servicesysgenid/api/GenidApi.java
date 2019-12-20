@@ -15,6 +15,11 @@ public interface GenidApi {
     @GetMapping
     long genId();
 
+    /**
+     * 批量生成id。
+     * @param size 生成id个数
+     * @return 个数数组
+     */
     @GetMapping("${genid.batch}")
     long[] genIds(@PathVariable int size);
 
