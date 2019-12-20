@@ -21,7 +21,7 @@ public interface GenidApi {
      * @return 个数数组
      */
     @GetMapping("${genid.batch}")
-    long[] genIds(@PathVariable(name = "size") int size);
+    Long[] genIds(@PathVariable(name = "size") int size);
 
     /**
      *

@@ -31,8 +31,8 @@ public class GenidController extends BaseController implements GenidApi {
     }
 
     @Override
-    public long[] genIds(int size) {
-        long[] ids = new long[size];
+    public Long[] genIds(int size) {
+        Long[] ids = new Long[size];
         for (int i = 0; i < size; i++) {
             ids[i] = genidService.genId();
         }
