@@ -1,0 +1,25 @@
+spring:
+  cloud:
+      config: #配置中心
+        name: service-sys-genid #在配置仓库的配置名称
+        profile: prod,path #激活文件
+        label: master
+        fail-fast: true
+        discovery:
+          enabled: true
+          service-id: config-server
+        username: admin
+        password: '{cipher}AQBnl3LGQGmwBvY+4jhIptkprx5hARNvoEZAm5u3OvZT6eW3tMZ/277JxOgktP5yD4DIZVCk80c8pBeF8HoVUMtiD2yQkrdcsajWD9WwtH4W2sE3kC+csfn8sqXvDRl0jn6xOIputypsZpBOuQTYEzaMbGeJ7zKkt/XniUc283iRhFcg+s+4WJ2nl15Q8vucoaEM06kedOuaXwiw/ajc357R4J2/PQJvRCfA8daw0cIBa/TBTXuX9DfRTKshcrc3NaPAZWDOmW4SLCYFxhF63cUP+btVhCouyi7XDdE6Kr9M/hg7imV0q7GgZ4mUjOl29MQiWKsBd5MuUdy90wgnD8RaS9IlsqwUL6awJmW5/Yjsz2gjkdVpdBOzUTPq1Zfg9kg='
+##服务注册
+eureka:
+  instance:
+    prefer-ip-address: true #实例在注册中心以ip形式显示
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+#    hostname: localhost #实例在注册中心以域名显示
+  client:
+    service-url:
+      defaultZone: http://172.31.94.241:1111/eureka/
+feign:
+  hystrix:
+    enabled: true  # 在feign中开启hystrix功能，默认情况下feign不开启hystrix功能
+
