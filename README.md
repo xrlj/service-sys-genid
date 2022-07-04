@@ -1,6 +1,6 @@
 ## dev
 
-    docker run --name service-sys-genid -e "SPRING_PROFILES_ACTIVE=dev" -e "EUREKA_INSTANCE_IP-ADDRESS=172.31.31.31" -p 9013:9013 -v /apps/service-sys-genid/tmp:/tmp -v /apps/service-sys-genid/logs:/logs -d 192.168.1.110:8082/xrlj/service-sys-genid-provider:0.0.1
+    docker run --name service-sys-genid --restart=always --add-host server-dev:172.31.31.31 -e "SPRING_PROFILES_ACTIVE=dev" -e "EUREKA_INSTANCE_IP-ADDRESS=172.31.31.31" -p 9013:9013 -v /apps/service-sys-genid/tmp:/tmp -v /apps/service-sys-genid/logs:/logs -d 127.0.0.1:8082/xrlj/service-sys-genid-provider:0.0.1
 
 ## 测试环境运行
 
